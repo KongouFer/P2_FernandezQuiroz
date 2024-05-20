@@ -41,19 +41,19 @@ class Detalles : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        val gamesApi = retrofit.create(CharactersAPI::class.java)
+        val charApi = retrofit.create(CharactersAPI::class.java)
 
         //val call: Call<GameDetailDto> = gamesApi.getGameDetail(id!!)
 
         //Para Apiary
-        val call: Call<CharacterDetailDta> = gamesApi.getCharacterDetail2(id!!)
+        val call: Call<CharacterDetailDta> = charApi.getCharacterDetail2(id!!)
 
         call.enqueue(object: Callback<CharacterDetailDta>{
             override fun onResponse(p0: Call<CharacterDetailDta>, response: Response<CharacterDetailDta>) {
-
+                binding.pbLoading.visibility = View.INVISIBLE
                 binding.apply {
 
-                    pbLoading.visibility = View.INVISIBLE
+
                     tvNameDetalle.text = response.body()?.nombre
                     tvGeneroDetalle.text = response.body()?.genero
                     tvFaccionDetalle.text = response.body()?.afiliacion

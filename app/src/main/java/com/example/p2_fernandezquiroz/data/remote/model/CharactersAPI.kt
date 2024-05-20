@@ -15,12 +15,11 @@ interface CharactersAPI {
 
     @GET("api/v1/characters")
     fun getCharacterDetail(
-        @Query("_id") id: String
+        @Query("id") id: String
     ): Call<CharacterDetailDta>
 
     @GET("api/v1/characters/{id}")
     fun getCharacterDetail2(
-        @Path("_id") id: String
-
+        @Path("id") id: String
     ): Call<CharacterDetailDta>
 }

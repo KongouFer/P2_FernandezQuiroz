@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">P2_FernandezQuiroz</string>
+    <string name="Toast_Sin_Conexion">No hay conexión</string>
 </resources>

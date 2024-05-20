@@ -40,6 +40,13 @@ android {
 
 dependencies {
 
+
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
     //Para retrofit y Gson
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
@@ -56,12 +63,6 @@ dependencies {
 
     //Imágenes con bordes redondeados
     implementation(libs.roundedimageview)
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
